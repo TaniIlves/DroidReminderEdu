@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">DroidReminder</string>
+    <string name="app_name">DroidReminder Beta</string>
+    <string name="search">Search</string>
 </resources>
