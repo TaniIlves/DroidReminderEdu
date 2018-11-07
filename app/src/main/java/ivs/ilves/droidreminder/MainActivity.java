@@ -10,7 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import ivs.ilves.droidreminder.adapter.TabsPagerFragmentAdapter;
+import ivs.ilves.droidreminder.adapter.TabsFragmentAdapter;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 drawerLayout.closeDrawers();
                 switch (menuItem.getItemId()) {
                     case R.id.actionNotificationItem:
-                        showNotivicationTab();
+                        showNotificationTab();
 
                 }
 
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
 
         viewPager = findViewById(R.id.viewPager);
 
-        TabsPagerFragmentAdapter adapter = new TabsPagerFragmentAdapter(getSupportFragmentManager());
+        TabsFragmentAdapter adapter = new TabsFragmentAdapter(this, getSupportFragmentManager());
         viewPager.setAdapter(adapter);
 
         TabLayout tabLayout = findViewById(R.id.tabLayout);
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void showNotivicationTab() {
+    private void showNotificationTab() {
 
         viewPager.setCurrentItem(Constants.TAB_TWO);
 
